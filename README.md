@@ -4,11 +4,11 @@
 
 1. `npm install`
 2. `npm start`  -- runs Angular app and json-server concurrently
-3. Open http://localhost:4200
+3. Open <http://localhost:4200>
 
 ## API
 
-JSON Server runs at http://localhost:3000
+JSON Server runs at <http://localhost:3000>
 Endpoints: /tasks
 
 ## Notes

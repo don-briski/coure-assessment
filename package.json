@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"npm run json-server\"",
     "json-server": "json-server --watch db.json --port 3000",
-    "build": "ng build",
+    "start:prod": "concurrently \"npm run json-server\" \"npm run serve:static\"",
+    "serve:static": "npx http-server dist/coure-assessment -p 8080",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

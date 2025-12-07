@@ -5,18 +5,13 @@ services:
     runtime: node
     plan: free
     buildCommand: npm install
-    startCommand: npx json-server --watch db.json --port $PORT --host 0.0.0.0
+    startCommand: npx json-server --watch db.json --port 3000 --host 0.0.0.0
     autoDeploy: true
 
   # Frontend
   - type: web
     name: tasks-angular-frontend
     runtime: static
-    rootDir: ./frontend
     buildCommand: npm install && npm run build -- --configuration production
     staticPublishPath: ./dist/coure-assessment/browser
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
     autoDeploy: true
